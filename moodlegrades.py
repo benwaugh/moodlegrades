@@ -1,4 +1,5 @@
 #!/bin/env python
+"""Downloads grades from Moodle course as CSV file."""
 
 import mechanize
 import getpass
@@ -9,6 +10,7 @@ output_filename = "grades.csv"
 user_agent = "Mozilla/5.0 (X11; Linux x86_64; rv:103.0) Gecko/20100101 Firefox/103.0"
 
 def main():
+    """Main program to download grades, steered by parameters provided as global variables."""
     br = init_browser()
     moodle_login(br)
     select_grade_download_form(br)
