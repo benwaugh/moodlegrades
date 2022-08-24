@@ -72,7 +72,7 @@ def select_grade_download_form(browser):
 
 def download_grades(browser):
     """Submit form and retrieve data."""
-    download_response = browser.submit()
+    download_response = browser.submit(name="submitbutton")
     data = download_response.get_data()
     string_data = data.decode()
     return string_data
